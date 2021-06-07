@@ -13,6 +13,12 @@ config_version=4
 config/name="RollingBallDemo"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
+
 [input]
 
 ui_left={

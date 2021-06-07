@@ -30,9 +30,6 @@ transform = Transform( 1, -2.98023e-08, 1.49012e-08, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = null
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.991783, 0.12793, 0, -0.12793, 0.991783, 0.017765, 4.02485, 18.369 )
-
 [node name="Floor" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 
@@ -46,3 +43,12 @@ material/0 = null
 [node name="John" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 script = ExtResource( 2 )
+
+[node name="CameraTarget" type="Spatial" parent="John"]
+transform = Transform( 1, 0, 0, 0, 0.970067, 0.242836, 0, -0.242836, 0.970067, 0, 3.87872, 13.5537 )
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.12024, 10.5562 )
+target = NodePath("../John/CameraTarget")
+speed = 4.0
+enabled = true
