@@ -4,7 +4,7 @@ var velocity = Vector3(0,0,0)
 var rotationVector = Vector3(0,0,0)
 const SPEED = 6
 const ROT_SPEED = 7
-const DAMPENING = 0.2
+const DAMPENING = 0.05
 
 func _ready():
 	pass
