@@ -68,6 +68,7 @@ transform = Transform( 0.915403, -0.343709, 0.209526, -0.379492, -0.563276, 0.73
 light_color = Color( 0.917647, 0.901961, 0.792157, 1 )
 light_energy = 2.27
 shadow_enabled = true
+directional_shadow_normal_bias = 0.55
 directional_shadow_max_distance = 65.3
 
 [node name="GridMap" type="GridMap" parent="."]
