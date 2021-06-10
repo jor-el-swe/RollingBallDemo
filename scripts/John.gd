@@ -2,8 +2,8 @@ extends KinematicBody
 
 var velocity = Vector3(0,0,0)
 var rotationVector = Vector3(0,0,0)
-const SPEED = 6
-const ROT_SPEED = 7
+const SPEED = 9
+const ROT_SPEED = 8
 const DAMPENING = 0.1
 
 func _ready():
@@ -43,3 +43,9 @@ func _physics_process(delta):
 	$MeshInstance.rotate_x(rotationVector.x)
 	$MeshInstance.rotate_z(rotationVector.z)
 	move_and_slide(velocity)
+
+
+func _on_enemy_body_entered(body):
+	if body.name == "John":
+		print("hit enemy", body)
+		get_tree().change_scene("res://GameOver.tscn")
