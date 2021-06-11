@@ -9,7 +9,7 @@ func _ready():
 func _on_coin_Collected():
 	coins += 1
 	_ready()
-	if coins == 1:
+	if coins == 5:
 		$Timer.start()
 
 
