@@ -1,6 +1,8 @@
 extends Area
 
-var rotationSpeed = 5;
+signal coinCollected
+
+var rotationSpeed = 5
 
 func _ready():
 	pass
@@ -11,6 +13,8 @@ func _physics_process(delta):
 
 func _on_coin_body_entered(body):
 	if body.name == "John":
+		emit_signal("coinCollected")
+		$AnimationPlayer.play("bounceCoin")
 		$Timer.start()
 
 
